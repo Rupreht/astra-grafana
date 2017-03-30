@@ -1,2 +1,3 @@
 #!/bin/bash
-netstat -vatn | grep ESTABLISHED | wc -l
+PATH="/bin:/usr/bin:/usr/sbin"
+netstat -st | grep established | awk '{print $1}'
