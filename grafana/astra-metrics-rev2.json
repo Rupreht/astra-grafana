@@ -176,7 +176,7 @@
               ],
               "measurement": "stream",
               "policy": "default",
-              "query": "SELECT mean(\"cc\")  *800 FROM \"stream\" WHERE \"id\" =~ /^$Name$/ AND $timeFilter GROUP BY time(1m) fill(null)",
+              "query": "SELECT mean(\"cc\")*800 FROM \"stream\" WHERE \"id\" =~ /^$Name$/ AND $timeFilter GROUP BY time(1m) fill(null)",
               "rawQuery": false,
               "refId": "B",
               "resultFormat": "time_series",
@@ -194,7 +194,7 @@
                   },
                   {
                     "params": [
-                      " *800"
+                      "*800"
                     ],
                     "type": "math"
                   }
@@ -302,7 +302,7 @@
               ],
               "measurement": "stream",
               "policy": "default",
-              "query": "SELECT mean(\"cc\") *80 FROM \"stream\" WHERE \"id\" <> 'select tag value' AND $timeFilter GROUP BY time($__interval) fill(null)",
+              "query": "SELECT mean(\"cc\")*80 FROM \"stream\" WHERE \"id\" <> 'select tag value' AND $timeFilter GROUP BY time($__interval) fill(null)",
               "rawQuery": false,
               "refId": "A",
               "resultFormat": "time_series",
